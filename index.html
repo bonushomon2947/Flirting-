@@ -196,7 +196,7 @@
         <h2>วันนี้พี่เหนือเหนื่อยไหมครับ?</h2>
         
         <button class="btn btn-pink" onclick="saveAnswer('q1', 'เหนื่อยมาก', 'r1')">เหนื่อยมาก 🥺</button>
-        <button class="btn btn-blue" onclick="saveAnswer('q1', 'ก็โอเคนะ', 'r1')">ก็โอเคนะ 🤍</button>
+        <button class="btn btn-blue" onclick="saveAnswer('q1', 'ก็โอเคนะ', 'r1')">ก็โอเคนะ </button>
         
         <div class="dots-container">
             <div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
@@ -232,7 +232,7 @@
     <!-- หน้า 5: Reaction 2 -->
     <div id="screen-r2" class="screen" style="background: var(--bg-yellow);">
         <div class="emoji-hero">✨</div>
-        <h2 id="r2-text">ไปสิ! งั้นเดี๋ยวผมจองร้านดี ๆ<br>ให้เลยนะครับ 🥺</h2>
+        <h2 id="r2-text">ไปสิ! งั้นเดี๋ยวผมหาร้านดี ๆ<br>ให้เลยนะครับ 🥺</h2>
         <div class="sub-pill" id="r2-sub">ไปกินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍</div>
         <button class="btn btn-pink" onclick="nextScreen('q3')">ถัดไป &rarr;</button>
         <div class="dots-container">
@@ -258,7 +258,7 @@
     <!-- หน้า 7: Reaction 3 -->
     <div id="screen-r3" class="screen" style="background: var(--bg-green);">
         <div class="emoji-hero">🎵</div>
-        <h2 id="r3-text">ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ 😘</h2>
+        <h2 id="r3-text">ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ </h2>
         <div class="sub-pill" id="r3-sub">ขอบคุณที่คุยด้วยกันนะครับ<br>(แม้จะเป็นแค่ในแชทก็ตาม)</div>
         <button class="btn btn-blue" onclick="nextScreen('q4')">ถัดไป &rarr;</button>
         <div class="dots-container">
@@ -324,8 +324,8 @@
         <div class="emoji-hero">🥺</div>
         <h2>ทำขนาดนี้ถือว่า<br>จีบพี่เหนือได้รึยังครับ?</h2>
         
-        <button class="btn btn-pink" onclick="saveAnswer('q6', 'ก็ได้แหละ', 'r6')">ก็ได้แหละ 😳</button>
-        <button class="btn btn-blue" onclick="saveAnswer('q6', 'อาจจะยัง', 'r6')">อาจจะยัง 😜</button>
+        <button class="btn btn-pink" onclick="saveAnswer('q6', 'ก็ได้แหละ', 'r6')">ก็ได้แหละ </button>
+        <button class="btn btn-blue" onclick="saveAnswer('q6', 'อาจจะยัง', 'r6')">อาจจะยัง </button>
         
         <div class="dots-container">
             <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div>
@@ -381,14 +381,14 @@
             'ก็โอเคนะ': { title: 'เก่งมากเลยย<br>สู้ๆ ต่อไปนะครับ! ✌️', sub: 'แต่อย่าลืมหาเวลา<br>พักผ่อนด้วยล่ะพี่เหนือ 🤍' }
         },
         q2: {
-            'ไปสิ': { title: 'ไปสิ! งั้นเดี๋ยวผมจองร้านดี ๆ<br>ให้เลยนะครับ 🥺', sub: 'ไปกินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍' },
+            'ไปสิ': { title: 'ไปสิ! งั้นเดี๋ยวผมหาร้านดี ๆ<br>ให้เลยนะครับ 🥺', sub: 'ไปกินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍' },
             'ขอดูเมนูก่อน': { title: 'ได้เลยครับ<br>เดี๋ยวผมส่งเมนูเด็ดๆ ไปให้เลือกนะ 🤤', sub: 'รับรองว่า<br>ต้องมีของชอบแน่ๆ 🤍' },
             'ไว้ก่อนนะ': { title: 'โอเคครับผม<br>ไว้พร้อมเมื่อไหร่บอกผมได้เลยนะ 😉', sub: 'รอไปกินของอร่อย<br>ด้วยกันอยู่นะครับ 🤍' }
         },
         q3: {
-            'ไม่รำคาญเลย': { title: 'ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ 😘', sub: 'ขอบคุณที่คุยด้วยกันนะครับ<br>(แม้จะเป็นแค่ในแชทก็ตาม)' },
+            'ไม่รำคาญเลย': { title: 'ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ ', sub: 'ขอบคุณที่คุยด้วยกันนะครับ<br>(แม้จะเป็นแค่ในแชทก็ตาม)' },
             'ก็ได้อยู่นะ': { title: 'น่ารักจังง<br>งั้นผมจะทักไปบ่อยๆ นะครับ 😆', sub: 'ถ้าวันไหนพี่เหนือยุ่งๆ ก็บอกผมได้เลยนะ' },
-            'ขอพื้นที่บ้าง': { title: 'รับทราบครับผมม 🫡', sub: 'เดี๋ยวผมจะทักไปเฉพาะเวลาคิดถึงละกันนะ 💖' }
+            'ขอพื้นที่บ้าง': { title: 'รับทราบครับผมม 🫡', sub: 'เดี๋ยวผมจะทักไปเฉพาะเวลาคิดถึงละกันนะ ' }
         },
         q4: {
             'วันนี้ก็ได้เลย': { title: 'โอเค! งั้นวันนี้เลยก็ได้<br>เดี๋ยวเราไปหาร้านกันนะครับ 😆', sub: 'ผมพร้อมเสมอเพื่อพี่เหนือ 💖' },
