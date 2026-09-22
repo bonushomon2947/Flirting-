@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>พี่เหนืออมีเรื่องอยากคุยด้วยครับบ</title>
+    <title>พี่เหนือครับบ ผมมีเรื่องอยากคุยด้วยนิดหน่อย</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -41,7 +41,7 @@
         .app-container {
             width: 100%;
             max-width: 430px;
-            height: 100dvh; /* ใช้ 100dvh เพื่อให้พอดีกับจอมือถือจริงๆ */
+            height: 100dvh; 
             max-height: 932px;
             background: var(--bg-yellow);
             position: relative;
@@ -49,7 +49,6 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
 
-        /* สำหรับจอคอม ให้ดูเป็นมือถือตั้ง */
         @media (min-width: 431px) {
             .app-container {
                 height: 850px;
@@ -80,12 +79,10 @@
             pointer-events: auto;
         }
 
-        /* Typography */
         h1 { font-size: 28px; font-weight: 600; color: #fff; line-height: 1.4; margin-bottom: 10px; }
         h2 { font-size: 24px; font-weight: 600; color: var(--text-main); line-height: 1.4; margin-bottom: 24px; margin-top: 10px;}
         p.subtitle { font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 40px; }
         
-        /* ปุ่มน่ารักๆ */
         .btn {
             width: 80%;
             max-width: 300px;
@@ -112,7 +109,6 @@
         .btn-pink { background-color: var(--pink-btn); }
         .btn-blue { background-color: var(--blue-btn); }
 
-        /* ป้ายคำถาม (Badge) */
         .badge {
             background: #fff;
             border: 2px dashed var(--pink-btn);
@@ -126,7 +122,6 @@
             display: inline-block;
         }
 
-        /* กล่องข้อความ Reaction */
         .sub-pill {
             background: rgba(255, 255, 255, 0.6);
             padding: 12px 24px;
@@ -137,14 +132,12 @@
             margin-top: -10px;
         }
 
-        /* รูปภาพ / Emoji ประดับ */
         .emoji-hero {
             font-size: 64px;
             margin-bottom: 10px;
             animation: bounce 2s infinite ease-in-out;
         }
 
-        /* Pagination Dots */
         .dots-container {
             position: absolute;
             bottom: 40px;
@@ -152,15 +145,14 @@
             gap: 8px;
         }
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: rgba(0,0,0,0.1);
         }
         .dot.active-pink { background: var(--pink-btn); }
         .dot.active-blue { background: var(--blue-btn); }
 
-        /* ของตกแต่งพื้นหลัง */
         .decor { position: absolute; pointer-events: none; opacity: 0.5; }
 
         @keyframes bounce {
@@ -168,7 +160,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* Loading */
         #loading-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -192,8 +183,8 @@
     <!-- หน้า 1: เริ่มต้น -->
     <div id="screen-start" class="screen active" style="background: var(--bg-night);">
         <div class="emoji-hero" style="font-size: 40px;">🌙 ✨</div>
-        <h1>พี่เหนืออมีเรื่องอยากคุยด้วย<br>นิดหน่อยครับ</h1>
-        <p class="subtitle">แต่พิมพ์แชทแล้วมันธรรมดาไป<br>เลยทำเว็บมาแทน </p>
+        <h1>พี่เหนือครับ ผมมีเรื่องอยากคุยด้วย<br>นิดหน่อย</h1>
+        <p class="subtitle">แต่พิมพ์แชทแล้วมันธรรมดาไป<br>เลยทำเว็บมาแทนครับ</p>
         <button class="btn btn-pink" onclick="nextScreen('q1')" style="margin-top: 40px;">กดตรงนี้สิ &rarr;</button>
         <div style="position: absolute; bottom: 0; right: 20px; font-size: 80px;">🐱</div>
     </div>
@@ -202,24 +193,24 @@
     <div id="screen-q1" class="screen" style="background: var(--bg-yellow);">
         <div class="badge">คำถามข้อที่ 1</div>
         <div class="emoji-hero">☁️</div>
-        <h2>วันนี้เหนื่อยไหมครับ?</h2>
+        <h2>วันนี้พี่เหนือเหนื่อยไหมครับ?</h2>
         
         <button class="btn btn-pink" onclick="saveAnswer('q1', 'เหนื่อยมาก', 'r1')">เหนื่อยมาก 🥺</button>
         <button class="btn btn-blue" onclick="saveAnswer('q1', 'ก็โอเคนะ', 'r1')">ก็โอเคนะ 🤍</button>
         
         <div class="dots-container">
-            <div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
     <!-- หน้า 3: Reaction 1 -->
     <div id="screen-r1" class="screen" style="background: var(--bg-pink);">
         <div class="emoji-hero">💤</div>
-        <h2 id="r1-text">งั้นพักบ้างน้าา<br>สู้ๆนะครับบเป็นกำลัใจให้เสมอน้าา</h2>
-        <div class="sub-pill" id="r1-sub"ซุปที่น่ารักของผม<br>ดูแลตัวเองด้วยนะครับ</div>
+        <h2 id="r1-text">งั้นพักบ้างนะครับ<br>สู้ๆ น้า เป็นกำลังใจให้เสมอครับ</h2>
+        <div class="sub-pill" id="r1-sub">ซุปที่น่ารักของผม<br>ดูแลตัวเองด้วยนะครับ</div>
         <button class="btn btn-blue" onclick="nextScreen('q2')">ถัดไป &rarr;</button>
         <div class="dots-container">
-            <div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
@@ -227,25 +218,25 @@
     <div id="screen-q2" class="screen" style="background: var(--bg-blue);">
         <div class="badge" style="border-color: var(--blue-btn);">คำถามข้อที่ 2</div>
         <div class="emoji-hero">🍜</div>
-        <h2>ถ้ามีคนชวนไปกินข้าว<br>ตอนนี้ จะไปไหม?</h2>
+        <h2>ถ้าผมชวนไปกินข้าว<br>ตอนนี้ พี่เหนือจะไปไหมครับ?</h2>
         
         <button class="btn btn-pink" onclick="saveAnswer('q2', 'ไปสิ', 'r2')">ไปสิ! 😋</button>
         <button class="btn btn-blue" onclick="saveAnswer('q2', 'ขอดูเมนูก่อน', 'r2')">ขอดูเมนูก่อน</button>
         <button class="btn" onclick="saveAnswer('q2', 'ไว้ก่อนนะ', 'r2')">ไว้ก่อนนะ</button>
         
         <div class="dots-container">
-            <div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
     <!-- หน้า 5: Reaction 2 -->
     <div id="screen-r2" class="screen" style="background: var(--bg-yellow);">
         <div class="emoji-hero">✨</div>
-        <h2 id="r2-text">ไปสิ! งั้นเดี๋ยวเราจองร้านดี ๆ<br>ให้เลยนะ 🥺</h2>
-        <div class="sub-pill" id="r2-sub">กินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍</div>
+        <h2 id="r2-text">ไปสิ! งั้นเดี๋ยวผมจองร้านดี ๆ<br>ให้เลยนะครับ 🥺</h2>
+        <div class="sub-pill" id="r2-sub">ไปกินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍</div>
         <button class="btn btn-pink" onclick="nextScreen('q3')">ถัดไป &rarr;</button>
         <div class="dots-container">
-            <div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
@@ -253,63 +244,114 @@
     <div id="screen-q3" class="screen" style="background: var(--bg-purple);">
         <div class="badge" style="border-color: #CBA6FF;">คำถามข้อที่ 3</div>
         <div class="emoji-hero">💬</div>
-        <h2>ถ้ามีคนอยากคุยด้วยทุกวัน<br>จะรำคาญไหม? 😂</h2>
+        <h2>ถ้าผมอยากคุยด้วยทุกวัน<br>พี่เหนือจะรำคาญไหมครับ? 😂</h2>
         
         <button class="btn btn-pink" onclick="saveAnswer('q3', 'ไม่รำคาญเลย', 'r3')">ไม่รำคาญเลย ❤️</button>
         <button class="btn btn-blue" onclick="saveAnswer('q3', 'ก็ได้อยู่นะ', 'r3')">ก็ได้อยู่นะ</button>
         <button class="btn" onclick="saveAnswer('q3', 'ขอพื้นที่บ้าง', 'r3')">ขอพื้นที่บ้าง</button>
         
         <div class="dots-container">
-            <div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
     <!-- หน้า 7: Reaction 3 -->
     <div id="screen-r3" class="screen" style="background: var(--bg-green);">
         <div class="emoji-hero">🎵</div>
-        <h2 id="r3-text">ไม่รำคาญเลยหรอ...<br>งั้นเราคุยกันได้ทุกวันเลยนะ 😘</h2>
-        <div class="sub-pill" id="r3-sub">ขอบคุณที่อยู่ด้วยกันนะ<br>(แม้จะเป็นแค่ในแชทก็ตาม)</div>
+        <h2 id="r3-text">ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ 😘</h2>
+        <div class="sub-pill" id="r3-sub">ขอบคุณที่คุยด้วยกันนะครับ<br>(แม้จะเป็นแค่ในแชทก็ตาม)</div>
         <button class="btn btn-blue" onclick="nextScreen('q4')">ถัดไป &rarr;</button>
         <div class="dots-container">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
-    <!-- หน้า 8: คำถามสุดท้าย -->
+    <!-- หน้า 8: คำถาม 4 -->
     <div id="screen-q4" class="screen" style="background: var(--bg-pink);">
-        <div class="badge">คำถามสุดท้ายแล้ว</div>
+        <div class="badge">คำถามข้อที่ 4</div>
         <div class="emoji-hero">📅</div>
-        <h2>ถ้าเราอยากชวนเธอไปกินข้าวกันสองคน<br>เราต้องจองคิวล่วงหน้ากี่วัน? 😉</h2>
+        <h2>ถ้าผมอยากชวนพี่เหนือไปกินข้าวกันสองคน<br>ผมต้องจองคิวล่วงหน้ากี่วันครับ? 😉</h2>
         
         <button class="btn btn-pink" onclick="saveAnswer('q4', 'วันนี้ก็ได้เลย', 'r4')">วันนี้ก็ได้เลย</button>
         <button class="btn btn-blue" onclick="saveAnswer('q4', 'ไว้ก่อนนะ', 'r4')">ไว้ก่อนนะ</button>
         <button class="btn" onclick="saveAnswer('q4', 'ต้องคิดก่อน', 'r4')">ต้องคิดก่อน</button>
         
         <div class="dots-container">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
     <!-- หน้า 9: Reaction 4 -->
     <div id="screen-r4" class="screen" style="background: var(--bg-yellow);">
         <div class="emoji-hero">🎉</div>
-        <h2 id="r4-text">โอเค! งั้นวันนี้เลยก็ได้<br>เดี๋ยวเราไปหาร้านกันนะ 😆</h2>
-        <div class="sub-pill" id="r4-sub">รอรี่แน่ล่ะ?<br>อยากกินอะไรเป็นพิเศษบอกได้นะ 💖</div>
-        <button class="btn btn-pink" onclick="submitData()">ไปกันเลย! &rarr;</button>
+        <h2 id="r4-text">โอเค! งั้นวันนี้เลยก็ได้<br>เดี๋ยวเราไปหาร้านกันนะครับ 😆</h2>
+        <div class="sub-pill" id="r4-sub">พร้อมแน่ล่ะ?<br>อยากกินอะไรบอกผมได้นะครับ 💖</div>
+        <button class="btn btn-pink" onclick="nextScreen('q5')">ถัดไป &rarr;</button>
         <div class="dots-container">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div><div class="dot"></div>
         </div>
     </div>
 
-    <!-- หน้า 10: จบ -->
+    <!-- หน้า 10: คำถาม 5 (ชวนดูหนัง) -->
+    <div id="screen-q5" class="screen" style="background: var(--bg-blue);">
+        <div class="badge" style="border-color: var(--blue-btn);">แถมอีกนิดดด</div>
+        <div class="emoji-hero">🍿</div>
+        <h2>กินข้าวเสร็จแล้ว<br>ไปดูหนังด้วยกันต่อไหมครับ?</h2>
+        
+        <button class="btn btn-pink" onclick="saveAnswer('q5', 'ไปสิ', 'r5')">ไปสิ! 🎬</button>
+        <button class="btn btn-blue" onclick="saveAnswer('q5', 'ขอดูโปรแกรมก่อนนะ', 'r5')">ขอดูโปรแกรมก่อนนะ</button>
+        <button class="btn" onclick="saveAnswer('q5', 'เอาไว้รอบหน้านะ', 'r5')">เอาไว้รอบหน้านะ</button>
+        
+        <div class="dots-container">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-blue"></div><div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- หน้า 11: Reaction 5 -->
+    <div id="screen-r5" class="screen" style="background: var(--bg-yellow);">
+        <div class="emoji-hero">📽️</div>
+        <h2 id="r5-text">เย้! งั้นเดี๋ยวผมจองตั๋วไว้รอนะครับ 😆</h2>
+        <div class="sub-pill" id="r5-sub">เตรียมตัวไปเดทกันนน 💖</div>
+        <button class="btn btn-pink" onclick="nextScreen('q6')">ถัดไป &rarr;</button>
+        <div class="dots-container">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div><div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- หน้า 12: คำถาม 6 (หน้าสุดท้าย จีบได้รึยัง) -->
+    <div id="screen-q6" class="screen" style="background: var(--bg-pink);">
+        <div class="badge">คำถามสุดท้ายจริงๆ แล้ว</div>
+        <div class="emoji-hero">🥺</div>
+        <h2>ทำขนาดนี้ถือว่า<br>จีบพี่เหนือได้รึยังครับ?</h2>
+        
+        <button class="btn btn-pink" onclick="saveAnswer('q6', 'ก็ได้แหละ', 'r6')">ก็ได้แหละ 😳</button>
+        <button class="btn btn-blue" onclick="saveAnswer('q6', 'อาจจะยัง', 'r6')">อาจจะยัง 😜</button>
+        
+        <div class="dots-container">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div>
+        </div>
+    </div>
+
+    <!-- หน้า 13: Reaction 6 (กดแล้วส่งข้อมูล) -->
+    <div id="screen-r6" class="screen" style="background: var(--bg-purple);">
+        <div class="emoji-hero">✨</div>
+        <h2 id="r6-text">งื้อออ เขินเลยยย 😳</h2>
+        <div class="sub-pill" id="r6-sub">งั้นผมเดินหน้าจีบเต็มที่เลยนะครับ 💖</div>
+        <button class="btn btn-pink" onclick="submitData()">รับทราบครับผม! &rarr;</button>
+        <div class="dots-container">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active-pink"></div>
+        </div>
+    </div>
+
+    <!-- หน้า 14: จบ -->
     <div id="screen-end" class="screen" style="background: var(--bg-night);">
         <div class="emoji-hero" style="font-size: 40px;">🌟</div>
         <h1 style="margin-bottom: 20px;">โอเค รับคำตอบแล้วครับ ☺️</h1>
         <p class="subtitle" style="line-height: 1.6; font-size: 15px;">
-            ขอบคุณที่เล่นด้วยกันนะ<br>
+            ขอบคุณที่เล่นด้วยกันนะครับ<br>
             จริงๆ ไม่ต้องตอบเว็บก็ได้<br>
-            แค่อยากทำอะไรให้เธอเล่นเฉย ๆ 🤍<br><br>
-            <span style="font-size: 12px; opacity: 0.7;">ขอบคุณนะ :)</span>
+            ผมแค่อยากทำอะไรให้พี่เหนือเล่นเฉย ๆ 🤍<br><br>
+            <span style="font-size: 12px; opacity: 0.7;">ขอบคุณครับ :)</span>
         </p>
         <div style="position: absolute; bottom: 0; display: flex; justify-content: center; width: 100%;">
             <div style="font-size: 100px;">🏙️🐈</div>
@@ -329,29 +371,38 @@
 
     // เก็บคำตอบทั้งหมด
     const userAnswers = {
-        q1: '', q2: '', q3: '', q4: ''
+        q1: '', q2: '', q3: '', q4: '', q5: '', q6: ''
     };
 
     // ตั้งค่าข้อความ Reaction ตามคำตอบที่เลือก
     const reactionsData = {
         q1: {
-            'เหนื่อยมาก': { title: 'งั้นพักบ้างนะ<br>อย่าทำงานหนักเกินไปล่ะ 👀', sub: 'คนเก่งของเรา<br>ดูแลตัวเองด้วยนะ 💖' },
-            'ก็โอเคนะ': { title: 'เก่งมากเลยย<br>สู้ๆ ต่อไปนะ! ✌️', sub: 'แต่อย่าลืมหาเวลา<br>พักผ่อนด้วยล่ะ 🤍' }
+            'เหนื่อยมาก': { title: 'งั้นพักบ้างนะครับ<br>อย่าทำงานหนักเกินไปล่ะ 👀', sub: 'ซุปที่น่ารักของผม<br>ดูแลตัวเองด้วยนะครับ 💖' },
+            'ก็โอเคนะ': { title: 'เก่งมากเลยย<br>สู้ๆ ต่อไปนะครับ! ✌️', sub: 'แต่อย่าลืมหาเวลา<br>พักผ่อนด้วยล่ะพี่เหนือ 🤍' }
         },
         q2: {
-            'ไปสิ': { title: 'ไปสิ! งั้นเดี๋ยวเราจองร้านดี ๆ<br>ให้เลยนะ 🥺', sub: 'กินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍' },
-            'ขอดูเมนูก่อน': { title: 'ได้เลยยย<br>เดี๋ยวส่งเมนูเด็ดๆ ไปให้เลือกนะ 🤤', sub: 'รับรองว่า<br>ต้องมีของชอบแน่ๆ 🤍' },
-            'ไว้ก่อนนะ': { title: 'โอเคคค<br>ไว้พร้อมเมื่อไหร่บอกได้เลยนะ 😉', sub: 'รอไปกินของอร่อย<br>ด้วยกันอยู่นะ 🤍' }
+            'ไปสิ': { title: 'ไปสิ! งั้นเดี๋ยวผมจองร้านดี ๆ<br>ให้เลยนะครับ 🥺', sub: 'ไปกินข้าวด้วยกัน<br>ต้องอร่อยแน่ ๆ 🤍' },
+            'ขอดูเมนูก่อน': { title: 'ได้เลยครับ<br>เดี๋ยวผมส่งเมนูเด็ดๆ ไปให้เลือกนะ 🤤', sub: 'รับรองว่า<br>ต้องมีของชอบแน่ๆ 🤍' },
+            'ไว้ก่อนนะ': { title: 'โอเคครับผม<br>ไว้พร้อมเมื่อไหร่บอกผมได้เลยนะ 😉', sub: 'รอไปกินของอร่อย<br>ด้วยกันอยู่นะครับ 🤍' }
         },
         q3: {
-            'ไม่รำคาญเลย': { title: 'ไม่รำคาญเลยหรอ...<br>งั้นเราคุยกันได้ทุกวันเลยนะ 😘', sub: 'ขอบคุณที่อยู่ด้วยกันนะ<br>(แม้จะเป็นแค่ในแชทก็ตาม)' },
-            'ก็ได้อยู่นะ': { title: 'น่ารักจังง<br>งั้นจะทักไปบ่อยๆ นะ 😆', sub: 'ถ้าวันไหนยุ่งๆ ก็บอกได้เลยนะ' },
-            'ขอพื้นที่บ้าง': { title: 'รับทราบครับผมม 🫡', sub: 'เดี๋ยวจะทักไปเฉพาะเวลาคิดถึงละกันนะ 💖' }
+            'ไม่รำคาญเลย': { title: 'ไม่รำคาญเลยหรอครับ...<br>งั้นผมทักหาทุกวันเลยนะ 😘', sub: 'ขอบคุณที่คุยด้วยกันนะครับ<br>(แม้จะเป็นแค่ในแชทก็ตาม)' },
+            'ก็ได้อยู่นะ': { title: 'น่ารักจังง<br>งั้นผมจะทักไปบ่อยๆ นะครับ 😆', sub: 'ถ้าวันไหนพี่เหนือยุ่งๆ ก็บอกผมได้เลยนะ' },
+            'ขอพื้นที่บ้าง': { title: 'รับทราบครับผมม 🫡', sub: 'เดี๋ยวผมจะทักไปเฉพาะเวลาคิดถึงละกันนะ 💖' }
         },
         q4: {
-            'วันนี้ก็ได้เลย': { title: 'โอเค! งั้นวันนี้เลยก็ได้<br>เดี๋ยวเราไปหาร้านกันนะ 😆', sub: 'พร้อมเสมอเพื่อเธอ 💖' },
-            'ไว้ก่อนนะ': { title: 'รับทราบครับผม<br>รอคิวว่างเสมอออ 😊', sub: 'พร้อมเมื่อไหร่ทักมาได้เลยนะ 🤍' },
-            'ต้องคิดก่อน': { title: 'ให้เวลาคิดเต็มที่เลยยย 😆', sub: 'ค่อยๆ คิดนะ รอได้เสมอ 🤍' }
+            'วันนี้ก็ได้เลย': { title: 'โอเค! งั้นวันนี้เลยก็ได้<br>เดี๋ยวเราไปหาร้านกันนะครับ 😆', sub: 'ผมพร้อมเสมอเพื่อพี่เหนือ 💖' },
+            'ไว้ก่อนนะ': { title: 'รับทราบครับผม<br>ผมรอคิวว่างเสมอออ 😊', sub: 'พร้อมเมื่อไหร่ทักผมมาได้เลยนะ 🤍' },
+            'ต้องคิดก่อน': { title: 'ให้เวลาคิดเต็มที่เลยครับ 😆', sub: 'ค่อยๆ คิดนะ ผมรอได้เสมอ 🤍' }
+        },
+        q5: {
+            'ไปสิ': { title: 'เย้! งั้นเดี๋ยวผมจองตั๋วไว้รอนะครับ 😆', sub: 'เตรียมตัวไปเดทกันนน 💖' },
+            'ขอดูโปรแกรมก่อนนะ': { title: 'ได้เลยครับบบ<br>เดี๋ยวส่งลิสต์หนังให้เลือกนะ 😉', sub: 'มีเรื่องน่าดูเพียบเลย 🤍' },
+            'เอาไว้รอบหน้านะ': { title: 'โอเคครับผมมม ไว้วันหลังเนอะ 😊', sub: 'แค่ไปกินข้าวด้วยกันก็ดีใจแล้ว 🤍' }
+        },
+        q6: {
+            'ก็ได้แหละ': { title: 'งื้อออ เขินเลยยย 😳', sub: 'งั้นผมเดินหน้าจีบเต็มที่เลยนะครับ 💖' },
+            'อาจจะยัง': { title: 'โหหห ยากจังงง 😂', sub: 'แต่ไม่ยอมแพ้หรอกนะ ผมจะพยายามต่อไปครับ! ✌️' }
         }
     };
 
@@ -378,7 +429,6 @@
     // ฟังก์ชันส่งข้อมูลไป Google Sheet
     function submitData() {
         if(SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
-            // ถ้ายังไม่ใส่ลิงก์ ให้ข้ามไปหน้าสุดท้ายเลย
             nextScreen('end');
             return;
         }
@@ -391,6 +441,8 @@
         formData.append('q2', userAnswers.q2);
         formData.append('q3', userAnswers.q3);
         formData.append('q4', userAnswers.q4);
+        formData.append('q5', userAnswers.q5);
+        formData.append('q6', userAnswers.q6);
 
         fetch(SCRIPT_URL, { method: 'POST', body: formData })
             .then(response => {
@@ -399,7 +451,7 @@
             })
             .catch(error => {
                 loading.style.display = 'none';
-                alert('อ๊ะ ส่งคำตอบไม่สำเร็จ แต่ไม่เป็นไรนะ ไปหน้าถัดไปเลย!');
+                alert('อ๊ะ ส่งคำตอบไม่สำเร็จ แต่ไม่เป็นไรนะ ไปหน้าสุดท้ายเลยละกัน!');
                 nextScreen('end');
             });
     }
@@ -407,4 +459,3 @@
 
 </body>
 </html>
-```
